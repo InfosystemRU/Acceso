@@ -1,0 +1,79 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.doofinder</groupId>
+	<artifactId>acceso</artifactId>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<project.encoding>UTF-8</project.encoding>
+
+		<!-- Parent -->
+		<servlet-api.version>3.1.0</servlet-api.version>
+		<jaxb-api.version>2.3.1</jaxb-api.version>
+		<spring-web.version>5.1.6.RELEASE</spring-web.version>
+		<spring-webmvc.version>5.1.6.RELEASE</spring-webmvc.version>
+
+		<!-- Pojos -->
+		<jackson-core.version>2.9.8</jackson-core.version>
+		<jackson-databind.version>2.9.8</jackson-databind.version>
+
+		<!-- Dao -->
+		<spring-data-jpa.version>2.1.6.RELEASE</spring-data-jpa.version>
+
+		<!-- Model -->
+		<hibernate-entitymanager.version>5.3.9.Final</hibernate-entitymanager.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${servlet-api.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>${jaxb-api.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring-web.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring-webmvc.version}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.3</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<encoding>${project.encoding}</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<modules>
+		<module>acceso-app</module>
+		<module>acceso-dao</module>
+		<module>acceso-modelo</module>
+		<module>acceso-pojos</module>
+		<module>acceso-servicios</module>
+	</modules>
+</project>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+        
+    <wb-module deploy-name="acceso-app-1.0.0">
+                
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+                
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+                
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <dependent-module archiveName="acceso-pojos-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/acceso-pojos/acceso-pojos">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="acceso-servicios-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/acceso-servicios/acceso-servicios">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="acceso-modelo-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/acceso-modelo/acceso-modelo">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="acceso-dao-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/acceso-dao/acceso-dao">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+                
+        <property name="context-root" value="acceso-app"/>
+                
+        <property name="java-output-path" value="/acceso-app/target/classes"/>
+            
+    </wb-module>
+    
+</project-modules>
